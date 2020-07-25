@@ -91,6 +91,18 @@ And also now running `whereis cuda` will give me correctly
 
 `cuda: /usr/lib/cuda /usr/include/cuda.h /usr/local/cuda`
 
-#### Important official Links
+And I tried to install cuda again by running `sudo apt-get install cuda` after above and it says
 
-[cuda-installation-guide-linux/index.html](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+`cuda is already the newest version (11.0.2-1)`
+
+### Pre-installation Actions
+
+Some actions must be taken before the CUDA Toolkit and Driver can be installed on Linux:
+Verify the system has a CUDA-capable GPU.
+Verify the system is running a supported version of Linux.
+Verify the system has gcc installed.
+Verify the system has the correct kernel headers and development packages installed.
+Download the NVIDIA CUDA Toolkit.
+Handle conflicting installation methods.
+
+#### And all the commands and details for all the above checks are explanied more tin this very important [official Link - cuda-installation-guide-linux/index.html](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
