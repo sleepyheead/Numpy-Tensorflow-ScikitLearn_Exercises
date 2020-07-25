@@ -2,6 +2,15 @@
 
 [CUDA®](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) is a parallel computing platform and programming model invented by NVIDIA®. It enables dramatic increases in computing performance by harnessing the power of the graphics processing unit (GPU).
 
+CUDA-capable GPUs have hundreds of cores that can collectively run thousands of computing threads. These cores have shared resources including a register file and a shared memory. The on-chip shared memory allows parallel tasks running on these cores to share data without sending it over the system memory bus.
+
+**System Requirements**
+
+- To use CUDA on your system, you will need the following installed:
+- CUDA-capable GPU
+- A supported version of Linux with a gcc compiler and toolchain
+- NVIDIA CUDA Toolkit (available at http://developer.nvidia.com/cuda-downloads)
+
 ### My first trial to install Cuda
 
 And the below steps seems to have worked.
@@ -31,11 +40,18 @@ You would get an output similar to the following:
 ```
 
 This means that CUDA is successfully installed on your Ubuntu 20.04.
-The slight difference is that cuda is not installed in the usual path (`/usr/local/cuda`, `/usr/local/cuda-10.1`). Instead, it is installed in `/usr/lib/` (`/usr/lib/cuda/`).
+
+#### The slight difference is that cuda is not installed in the usual path (`/usr/local/cuda`, `/usr/local/cuda-10.1`). Instead, it is installed in `/usr/lib/` (`/usr/lib/cuda/`).
 
 You can get where CUDA is installed by running the following command:
 
 `whereis cuda`
+
+#### Note that the above problem of NOT installing cuda at the right directory in Ubuntu was indeed there when following the above steps ( i.e. directly running `sudo apt install nvidia-cuda-toolkit` ) - BUT after NVIDIA Cuda 11 Toolkit for Ubuntu 20.04 was finally released and I followed the below official guidance - the above issue of misplacing the `cuda` file WAS NO MORE THERE.
+
+Now running `whereis cuda` will give me correctly
+
+`cuda: /usr/lib/cuda /usr/include/cuda.h /usr/local/cuda`
 
 ### Now installing the latest Cuda release for Ubuntu 20.04
 
@@ -60,3 +76,21 @@ sudo apt-get -y install cuda
 ```
 
 The above commands are after selecting Ubuntu and other relevant system architecture. And the last command from above will install 3.8 GB of packages.
+
+Now running `nvcc -V` will give me
+
+```
+nvcc -V
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Sun_Jul_28_19:07:16_PDT_2019
+Cuda compilation tools, release 10.1, V10.1.243
+```
+
+And also now running `whereis cuda` will give me correctly
+
+`cuda: /usr/lib/cuda /usr/include/cuda.h /usr/local/cuda`
+
+#### Important official Links
+
+[cuda-installation-guide-linux/index.html](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
