@@ -24,10 +24,11 @@ As per now, there is no deb file or run file for Ubuntu 20.04, so the only solut
 
 ```
 
-It will take a while to be installed.
-After that, to make sure that CUDA is installed, run:
+It will take a while to be installed. After that, to make sure that CUDA is installed, run:
 
     `nvcc -V`
+
+`nvcc` stands for Nvidia CUDA Compiler nvcc.
 
 You would get an output similar to the following:
 
@@ -53,7 +54,7 @@ Now running `whereis cuda` will give me correctly
 
 `cuda: /usr/lib/cuda /usr/include/cuda.h /usr/local/cuda`
 
-### Now installing the latest Cuda release for Ubuntu 20.04
+## As of 25-July-2020 - THIS IS THE OFFICIAL installation steps for the latest Cuda release for Ubuntu 20.04
 
 1. [https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html](https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html)
 
