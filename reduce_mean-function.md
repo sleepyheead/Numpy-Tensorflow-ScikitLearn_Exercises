@@ -12,6 +12,14 @@ y - ( mx b )
 
 ![](./assets/2020-07-25-14-03-32.png)
 
+Your goal is to minimize the square of the error. The algorithm computes the mean of the square error. This step is called the minimization of the error. For linear regression is the , also called MSE. Mathematically, it is: Mean Square Error
+
+If the average error is large, it means the model performs poorly and the weights are not chosen properly. To correct the weights, you need to use an optimizer. The traditional optimizer is called . Gradient Descent
+
+The gradient descent takes the derivative and decreases or increases the weight. If the derivative is positive, the weight is decreased. If the derivative is negative, the weight increases. The model will update the weights and recompute the error. This process is repeated until the error does not change anymore. Each process is called an . Besides, the gradients are multiplied by a learning rate. It indicates the speed of iteration the learning.
+
+If the learning rate is too small, it will take a very long time for the algorithm to converge (i.e requires lots of iterations). If the learning rate is too high, the algorithm might never converge.
+
 In machine learning applications, values of the loss should always have the same sign. You can make sure all the loss values are positive by computing the square of the error at each point and take the average of the error values. If there are N points, you can compute the loss with the following equation:
 
 ![](./assets/2020-07-25-14-09-10.png)

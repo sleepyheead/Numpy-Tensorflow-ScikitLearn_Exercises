@@ -12,3 +12,8 @@ This is accomplished by creating a computational graph, which takes multidimensi
 ### Sessions
 
 The Graph is run in a Session, where you specify what operations to execute in the run-function. Data from outside may also be supplied to placeholders in the graph, so you can run it multiple times with different input. Furthermore, intermediate result (such as model weights) can be incrementally updated in variables, which will retain their values between runs.
+
+#### What happens if you don’t close a TensorFlow session?
+
+If you dont close - It just keeps training for ever and ever.
+Closing the session helps in freeing the garbage collected and release the resources occupied. It is advisable to write code at the end for closing the session. Otherwise you might encounter bugs that can screw up your computations.
