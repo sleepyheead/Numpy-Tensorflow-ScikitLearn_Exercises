@@ -30,7 +30,7 @@ The CUDA Toolkit includes libraries, debugging and optimization tools, a compile
 
 ## Important - First check your GPU if its compatible with CUDA
 
-You can also use the lshw command to list the hardware installed on a Linux computer. It reports a variety of types, too—not just PCI hardware.
+You can use the **`lshw`** command to list the hardware installed on a Linux computer. It reports a variety of types, too—not just PCI hardware.
 
 To tell it to report on the graphics cards it finds, we’ll use the -C (class) option and pass the “display” modifier. The -numeric option forces lshw to provide the numeric IDs of the devices, as well as their names.
 
@@ -56,3 +56,9 @@ It will give you an output something like below
 ```
 
 Take note of yours, and visit NVidia’s site of GPUs that support CUDA **[here](https://developer.nvidia.com/cuda-gpus)**. If your card is on the list, then you know that TensorFlow can support GPU operations on your machine, but before you can install and run TensorFlow, you’ll need to install the CUDA drivers for your machine and the CUDNN updates for it.
+
+### You can also run
+
+`lspci | grep -i nvidia`
+
+![](2020-07-26-21-01-51.png)

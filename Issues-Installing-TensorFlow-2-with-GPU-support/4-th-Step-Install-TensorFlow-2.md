@@ -1,3 +1,5 @@
+**Before you can install and run TensorFlow, you'll need to install the CUDA drivers for your machine and the cuDNN updates for it.**
+
 ### Fresh installation of Tensorflow in local machine
 
 When installing TensorFlow, we want to make sure we are installing and upgrading to the newest version available in PyPi.

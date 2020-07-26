@@ -1,38 +1,14 @@
-### cuDNN installation is required to resolve this issue - After running a .py file containing a TensorFlow training code I was getting the following error.
+### Install cuDNN - This is probably relativelyl trickier than the other steps in this whole procedures
+
+If before installing cuDNN - you try to run a .py file containing a TensorFlow training code I was getting the following error.
 
 ```
 Ubuntu 20.04 NVDIA cuda Could not load dynamic library 'libcudnn.so.7'; dlerror: libcudnn.so.7
 ```
 
-Followed this [askubuntu](https://askubuntu.com/questions/1230645/when-is-cuda-gonna-be-released-for-ubuntu-20-04)
+### So to resolve the above you need to install cuDNN (7.6.5)
 
-**NOTE - For Cuda only, follow my other note as not Ubuntu 20.04's cuda package has been released.**
-
-So I have already followed the above process and now running
-
-`nvcc -V` correctly gives me
-
-```
-nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2019 NVIDIA Corporation
-Built on Sun_Jul_28_19:07:16_PDT_2019
-Cuda compilation tools, release 10.1, V10.1.243
-
-```
-
-Then running `dpkg -l | grep cuda-toolkit` correctly gives me
-
-```
-ii  cuda-toolkit-11-0                             11.0.2-1                                  amd64        CUDA Toolkit 11.0 meta-package
-ii  nvidia-cuda-toolkit                           10.1.243-3                                amd64        NVIDIA CUDA development toolkit
-
-```
-
-AND also `cat /usr/local/cuda/version.txt` correctly gives me
-
-`CUDA Version 11.0.207`
-
-## NOW the most important step - Install cuDNN (7.6.5) - This is what I did on 25-July-2020
+Followed this very helpful [askubuntu](https://askubuntu.com/questions/1230645/when-is-cuda-gonna-be-released-for-ubuntu-20-04)
 
 First go to **[this official link][3]** then choose _Download cuDNN_. You'll be asked to login/create an account. After logging in and customary acceptance of _the Terms of the cuDNN Software License Agreement_.
 
@@ -44,11 +20,11 @@ A list of downloadable cuDNN will be displayed > Expand the section for **Downlo
 
 After the download is finished, extract the file in your locally downloaded directory
 
-#### Then then open the terminal in that downloaded-directory and run:
+#### Then open the terminal in that downloaded-directory and run:
 
 `sudo cp cuda/include/cudnn.h /usr/lib/cuda/include/`
 
-To copy the `cuda/include/cudnn.h` file to `/usr/lib/cuda/include/` folder. You can ofcourse manually copy this file as well, i.e. without using the Terminal.
+To copy the `cuda/include/cudnn.h` file to `/usr/lib/cuda/include/` folder. You can of-course manually copy this file as well, i.e. without using the Terminal.
 
 After that: Copy all files under `cuda/lib64/` to `/usr/lib/cuda/lib64/` folder
 
@@ -58,7 +34,7 @@ After that: Copy all files under `cuda/lib64/` to `/usr/lib/cuda/lib64/` folder
 
     `sudo chmod a+r /usr/lib/cuda/include/cudnn.h /usr/lib/cuda/lib64/libcudnn*`
 
-#### Once you finish, you have to add the CUDA path to your `~/.bashrc` file. You need to run:
+#### Once you finish, you have to add the CUDA path to your `~/.bashrc` file. Open ~/.bashrc and add following lines
 
 ```
     echo 'export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
