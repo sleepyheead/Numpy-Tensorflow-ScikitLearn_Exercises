@@ -1,9 +1,3 @@
-### What is CUDA in relation to NVIDIA in Ubuntu
-
-[CUDA®](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) is a parallel computing platform and programming model invented by NVIDIA®. It enables dramatic increases in computing performance by harnessing the power of the graphics processing unit (GPU).
-
-CUDA-capable GPUs have hundreds of cores that can collectively run thousands of computing threads. These cores have shared resources including a register file and a shared memory. The on-chip shared memory allows parallel tasks running on these cores to share data without sending it over the system memory bus.
-
 **System Requirements**
 
 - To use CUDA on your system, you will need the following installed:
