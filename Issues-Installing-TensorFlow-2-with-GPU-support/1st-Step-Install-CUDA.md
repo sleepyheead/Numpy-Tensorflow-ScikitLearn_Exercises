@@ -49,7 +49,7 @@ And also now running `whereis cuda` will give me correctly
 
 `cuda: /usr/lib/cuda /usr/include/cuda.h /usr/local/cuda`
 
-And I tried to install cuda again by running `sudo apt-get install cuda` after above and it says
+And if I tried to install cuda again by running `sudo apt-get install cuda` after above and it says
 
 `cuda is already the newest version (11.0.2-1)`
 
