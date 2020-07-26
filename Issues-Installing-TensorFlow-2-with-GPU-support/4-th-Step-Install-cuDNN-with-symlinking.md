@@ -1,11 +1,3 @@
-### First what is cuDNN
-
-[According to NVIDIA](https://developer.nvidia.com/cudnn#:~:text=The%20NVIDIA%20CUDA%C2%AE%20Deep,%2C%20normalization%2C%20and%20activation%20layers.)
-
-"The NVIDIA CUDA® Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks. cuDNN provides highly tuned implementations for standard routines such as forward and backward convolution, pooling, normalization, and activation layers.
-
-Deep learning researchers and framework developers worldwide rely on cuDNN for high-performance GPU acceleration. It allows them to focus on training neural networks and developing software applications rather than spending time on low-level GPU performance tuning. cuDNN accelerates widely used deep learning frameworks, including Caffe2, Chainer, Keras, MATLAB, MxNet, PyTorch, and TensorFlow. "
-
 ### cuDNN installation is required to resolve this issue - After running a .py file containing a TensorFlow training code I was getting the following error.
 
 ```
@@ -118,6 +110,8 @@ Open Terminal > type `python` which will start the shell. then type
 Then, ONLY to test CUDA support for your Tensorflow installation, you can run the following command in the shell:
 
 `tf.test.is_built_with_cuda()`
+
+Should return **True**
 
 **Finally, to confirm that the GPU is available to Tensorflow, you can test using a built-in utility function in TensorFlow as shown here:**
 
