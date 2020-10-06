@@ -27,13 +27,36 @@ CREATE A NUMPY ZEROS ARRAY WITH A SPECIFIC SHAPE
 
 We can do this with the shape parameter:
 
+#### Code to generate a Matrix of 2 by 3 (2 rows and 3 columns)
+
 ```python
 import numpy as np
 
-np.zeros(shape = (2, 3))
+A = np.zeros(shape = (2, 3))
+print
+
+# Output below
+[[0. 0. 0.]
+ [0. 0. 0.]]
 
 ```
 
 Which produces an array like the following:
 
 ![](assets/2020-10-06-16-28-05.png)
+
+#### create a NumPy zeros array with a specific shape and a specific
+
+```python
+
+np.zeros(shape = (3, 5), dtype = 'int')
+
+# Output
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+```
+
+##### Will produce
+
+![](assets/2020-10-06-16-36-38.png)
