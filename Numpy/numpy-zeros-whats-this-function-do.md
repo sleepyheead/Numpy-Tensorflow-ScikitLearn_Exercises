@@ -60,3 +60,28 @@ np.zeros(shape = (3, 5), dtype = 'int')
 ##### Will produce
 
 ![](assets/2020-10-06-16-36-38.png)
+
+---
+
+#### More complex shape
+
+```python
+A = np.zeros(shape = (2, 3, 5), dtype = 'int')
+
+# Output
+
+[[[0 0 0 0 0]
+  [0 0 0 0 0]
+  [0 0 0 0 0]]
+
+ [[0 0 0 0 0]
+  [0 0 0 0 0]
+  [0 0 0 0 0]]]
+
+```
+
+1. The first parameter to shape is the number of internal elements
+
+So here I have total 2 internal arrays
+
+2. The second and third parameters are just the row \* column numbers of the inner array. So here I have 3 rows and 5 columns
