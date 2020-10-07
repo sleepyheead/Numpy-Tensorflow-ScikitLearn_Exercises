@@ -4,6 +4,8 @@ this function enables you to specify the exact dimensions of the array and the d
 
 ![](assets/2020-10-06-16-21-03.png)
 
+![](assets/2020-10-06-16-49-16.png)
+
 Source - https://www.sharpsightlabs.com/blog/numpy-zeros-python/
 
 #### First what is Numpy Array
@@ -85,3 +87,5 @@ A = np.zeros(shape = (2, 3, 5), dtype = 'int')
 So here I have total 2 internal arrays
 
 2. The second and third parameters are just the row \* column numbers of the inner array. So here I have 3 rows and 5 columns
+
+![](assets/2020-10-06-16-43-50.png)
