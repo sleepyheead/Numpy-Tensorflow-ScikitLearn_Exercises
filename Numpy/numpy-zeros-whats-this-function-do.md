@@ -1,4 +1,4 @@
-##### you can create an array that only contains only zeros using the NumPy zeros() function.
+##### NumPy zeros() - you can create an array that only contains only zeros using the NumPy zeros() function.
 
 this function enables you to specify the exact dimensions of the array and the data type
 
@@ -6,7 +6,7 @@ this function enables you to specify the exact dimensions of the array and the d
 
 ![](assets/2020-10-06-16-49-16.png)
 
-Source - https://www.sharpsightlabs.com/blog/numpy-zeros-python/
+##### Source - https://www.sharpsightlabs.com/blog/numpy-zeros-python/
 
 #### First what is Numpy Array
 
