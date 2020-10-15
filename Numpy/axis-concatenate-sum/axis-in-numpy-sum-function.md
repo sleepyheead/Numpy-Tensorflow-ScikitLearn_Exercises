@@ -55,6 +55,10 @@ This confuses many beginners, so let me explain.
 
 ![](assets/2020-10-15-23-31-37.png)
 
+### Remember that axis 0 refers to the vertical direction across the rows. That means that the code np.sum(np_array_2d, axis = 0) collapses the rows during the summation.
+
+![](assets/2020-10-15-23-38-05.png)
+
 ## So when we set axis = 0, we’re not summing across the rows. Rather we collapse axis 0.
 
 ---
@@ -83,6 +87,8 @@ array([3, 12])
 ```
 
 ### axis 1 refers to the horizontal direction across the columns. That means that the code np.sum(np_array_2d, axis = 1) collapses the columns during the summation.
+
+![](assets/2020-10-15-23-38-05.png)
 
 ![](assets/2020-10-15-23-36-16.png)
 
