@@ -1,3 +1,11 @@
+![](assets/NumPy_Axes.png)
+
+---
+
+![](assets/axis-2.jpg)
+
+---
+
 #### NUMPY AXES ARE LIKE AXES IN A COORDINATE SYSTEM
 
 https://www.sharpsightlabs.com/blog/numpy-axes-explained/
@@ -35,7 +43,7 @@ Which has shape of (4, 3) and dimension 2. But it can describe 3D space because 
 
 ##### 1-dimensional NumPy arrays e.g. [0 1 2 3 4 5 6 7 8] only have one axis.
 
-![](2020-10-15-22-21-49.png)
+![](assets/2020-10-15-22-21-49.png)
 
 ```python
 import numpy as np
