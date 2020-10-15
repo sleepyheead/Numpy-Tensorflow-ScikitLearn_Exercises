@@ -8,7 +8,7 @@ When trying to understand axes in NumPy sum, you need to know what the axis para
 
 Said differently, the axis parameter controls which axis will be collapsed.
 
-Remember, functions like sum(), mean(), min(), median(), and other statistical functions aggregate your data.
+Remember, functions like **sum(), mean(), min(), median()**, and other statistical functions aggregate your data.
 
 ### NUMPY SUM WITH AXIS = 0
 
@@ -65,6 +65,8 @@ This confuses many beginners, so let me explain.
 
 ## NUMPY SUM WITH AXIS = 1
 
+Again start with our earlier same array `np_array_2d`
+
 ```python
 print(np_array_2d)
 [[0 1 2]
@@ -85,6 +87,14 @@ And here’s the output:
 array([3, 12])
 
 ```
+
+#### So Generally
+
+If you do `.sum(axis=n)`, for example, then dimension `n` is collapsed and deleted, with each value in the new matrix equal to the sum of the corresponding collapsed values. For example, if `b` has shape `(5,6,7,8)`, and you do `c = b.sum(axis=2)`, then axis 2 (dimension with size 7) is collapsed, and the result has shape `(5,6,8)`. Furthermore, `c[x,y,z]` is equal to the sum of all elements `b[x,y,:,z]`.
+
+https://stackoverflow.com/a/17079437/1902852
+
+---
 
 ### axis 1 refers to the horizontal direction across the columns. That means that the code np.sum(np_array_2d, axis = 1) collapses the columns during the summation.
 

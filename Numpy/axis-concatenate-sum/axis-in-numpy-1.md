@@ -1,3 +1,13 @@
+#### From Numpy's tutorial, axis can be indexed with integers, like 0 is for column, 1 is for row.
+
+By definition, the axis number of the dimension is the index of that dimension within the array's `shape`. It is also the position used to access that dimension during indexing.
+
+For example, if a 2D array `a` has shape (5,6), then you can access `a[0,0]` up to `a[4,5]`. Axis 0 is thus the first dimension (the "rows"), and axis 1 is the second dimension (the "columns"). In higher dimensions, where "row" and "column" stop really making sense, try to think of the axes in terms of the shapes and indices involved.
+
+Source - https://stackoverflow.com/a/17079437/1902852
+
+---
+
 ![](assets/NumPy_Axes.png)
 
 ---
@@ -13,6 +23,8 @@ https://www.sharpsightlabs.com/blog/numpy-axes-explained/
 So if we have a point at position (2, 3), we’re basically saying that it lies 2 units along the x axis and 3 units along the y axis.
 
 ![](assets/2020-10-15-22-01-47.png)
+
+---
 
 #### NUMPY AXES ARE THE DIRECTIONS ALONG THE ROWS AND COLUMNS
 
