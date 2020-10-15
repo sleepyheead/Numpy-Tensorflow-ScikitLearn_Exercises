@@ -8,6 +8,23 @@
 
 ![](assets/default-numpy-concatenate.png)
 
+```python
+x = np.concatenate(([
+       [2, 5, 9],
+       [4, 1, 3]],
+       [
+        [5, 8, 3],
+        [4, 6, 1]]), axis=0)
+
+print(x)
+
+# [[2 5 9]
+#  [4 1 3]
+#  [5 8 3]
+#  [4 6 1]]
+
+```
+
 ---
 
 ```python
