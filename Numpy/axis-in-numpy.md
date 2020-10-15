@@ -15,3 +15,44 @@ Just like coordinate systems, NumPy arrays also have axes.
 In a 2-dimensional NumPy array, the axes are the directions along the rows and columns.
 
 ---
+
+#### Here is the documentation:
+
+In Numpy dimensions are called axes. The number of axes is rank. For example, the coordinates of a point in 3D space [1, 2, 1] is an array of rank 1, because it has one axis. That axis has a length of 3.
+
+https://stackoverflow.com/a/19390939/1902852
+
+In numpy arrays, dimensionality refers to the number of axes needed to index it, not the dimensionality of any geometrical space. For example, you can describe the locations of points in 3D space with a 2D array:
+
+```
+array([[0, 0, 0],
+       [1, 2, 3],
+       [2, 2, 2],
+       [9, 9, 9]])
+```
+
+Which has shape of (4, 3) and dimension 2. But it can describe 3D space because the length of each row (axis 1) is three, so each row can be the x, y, and z component of a point's location. The length of axis 0 indicates the number of points (here, 4). However, that is more of an application to the math that the code is describing, not an attribute of the array itself. In mathematics, the dimension of a vector would be its length (e.g., x, y, and z components of a 3d vector), but in numpy, any "vector" is really just considered a 1d array of varying length. The array doesn't care what the dimension of the space (if any) being described is.
+
+##### 1-dimensional NumPy arrays e.g. [0 1 2 3 4 5 6 7 8] only have one axis.
+
+![](2020-10-15-22-21-49.png)
+
+```python
+import numpy as np
+
+a = np.arange(9)
+print(a)
+
+# [0 1 2 3 4 5 6 7 8]
+
+print(a.ndim)  # number of dimensions
+# 1
+
+print(a.shape)
+# (9,)
+
+b = np.array([[0,0,0],[1,2,3],[2,2,2],[9,9,9]])
+print(b.ndim)
+# 2
+
+```
