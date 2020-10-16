@@ -1,6 +1,6 @@
 #### Shape of an Array
 
-![](2020-10-14-15-19-09.png)
+![](assets/2020-10-14-15-19-09.png)
 
 The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension. In other words: The "shape" of an array is a tuple with the number of elements per axis (dimension). In our example, the shape is equal to (6, 3), i.e. we have 6 lines and 3 columns.
 

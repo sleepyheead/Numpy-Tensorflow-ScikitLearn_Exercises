@@ -4,6 +4,10 @@ Let’s take a look at how NumPy axes work inside of the NumPy sum function.
 
 When trying to understand axes in NumPy sum, you need to know what the axis parameter actually controls.
 
+The axis argument can be an integer, which specifies the axis to aggregate values over.
+In many cases the axis argument can also be a tuple of integers, which specifies multiple
+axes to aggregate over.
+
 #### In `np.sum()`, the axis parameter controls which axis will be aggregated.
 
 Said differently, the axis parameter controls which axis will be collapsed.
@@ -90,7 +94,7 @@ array([3, 12])
 
 #### So Generally
 
-If you do `.sum(axis=n)`, for example, then dimension `n` is collapsed and deleted, with each value in the new matrix equal to the sum of the corresponding collapsed values. For example, if `b` has shape `(5,6,7,8)`, and you do `c = b.sum(axis=2)`, then axis 2 (dimension with size 7) is collapsed, and the result has shape `(5,6,8)`. Furthermore, `c[x,y,z]` is equal to the sum of all elements `b[x,y,:,z]`.
+If you do `.sum(axis=n)`, for example, then dimension `n` is collapsed and deleted, with each value in the new matrix equal to the sum of the corresponding collapsed values. For example, if `b` has shape `(5,6,7,8)`, and you do `c = b.sum(axis=2)`, then axis 2 (dimension with size 7) is collapsed, and the result has shape `(5,6,8)`.
 
 https://stackoverflow.com/a/17079437/1902852
 

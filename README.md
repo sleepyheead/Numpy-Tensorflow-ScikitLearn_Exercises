@@ -18,5 +18,3 @@ Will output `2.2.0`
 **To verify the installation, you can also run the following command within the terminal directly, which will print the TensorFlow version:**
 
 `python -c 'import tensorflow as tf; print(tf.__version__)'`
-
-1682
