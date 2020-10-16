@@ -22,3 +22,9 @@ print(data.sum(axis=0))
 print(data.sum(axis=1))
 # [ 6 15 24]
 ```
+
+So if you are having problem in remembering the above, while executing aggregating functions on Numpy array - just remember that you are removing that dimension when you run mean or sum on that axis.
+
+### axis=0 removes the row dimension
+
+### axis=1 removes the column dimension
