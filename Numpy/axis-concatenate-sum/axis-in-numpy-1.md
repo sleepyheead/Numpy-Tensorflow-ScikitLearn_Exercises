@@ -45,6 +45,19 @@ And now its 2. This is a 2-D array with 3 rows and 3 columns. It has two axis.
 
 ---
 
+In numpy arrays, dimensionality refers to the number of axes needed to index it, not the dimensionality of any geometrical space. For example, you can describe the locations of points in 3D space with a 2D array:
+
+```
+array([[0, 0, 0],
+       [1, 2, 3],
+       [2, 2, 2],
+       [9, 9, 9]])
+```
+
+Which has shape of (4, 3) and dimension 2. But it can describe 3D space because the length of each row (axis 1) is three, so each row can be the x, y, and z component of a point's location.
+
+---
+
 #### From Numpy's tutorial, axis can be indexed with integers, like 0 is for column, 1 is for row.
 
 By definition, the axis number of the dimension is the index of that dimension within the array's `shape`. It is also the position used to access that dimension during indexing.
