@@ -1,12 +1,57 @@
+```python
+import numpy as np
+
+x = 10
+print('Dimension of x is ', np.ndim(x))
+# Dimension of x is  0
+```
+
+Then
+
+```python
+x = [10]
+print('Dimension of x is ', np.ndim(x))
+# Dimension of x is  1
+
+```
+
+Then add more elements to the array
+
+```python
+
+x = [10, 20, 30 ]
+print('Dimension of x is ', np.ndim(x))
+# Dimension of x is  1
+
+```
+
+Dimension is still 1
+
+Now
+
+```python
+
+x = [[10, 20, 30 ],
+     [40, 50, 60 ],
+     [70, 80, 90 ]
+
+]
+print('Dimension of x is ', np.ndim(x))
+# Dimension of x is  2
+
+```
+
+And now its 2. This is a 2-D array with 3 rows and 3 columns. It has two axis.
+
+---
+
 #### From Numpy's tutorial, axis can be indexed with integers, like 0 is for column, 1 is for row.
 
 By definition, the axis number of the dimension is the index of that dimension within the array's `shape`. It is also the position used to access that dimension during indexing.
 
 For example, if a 2D array `a` has shape (5,6), then you can access `a[0,0]` up to `a[4,5]`. Axis 0 is thus the first dimension (the "rows"), and axis 1 is the second dimension (the "columns"). In higher dimensions, where "row" and "column" stop really making sense, try to think of the axes in terms of the shapes and indices involved.
 
-Source - https://stackoverflow.com/a/17079437/1902852
-
----
+## Source - https://stackoverflow.com/a/17079437/1902852
 
 ![](assets/NumPy_Axes.png)
 
