@@ -1,5 +1,7 @@
 #### `np.c_` is a way of doing array concatenate - its NOT the same as concatenate() function
 
+### It concats your first array into the last dimension (axis) of your last array in the function.
+
 ## All you have to do is add along second axis.
 
 ---
@@ -37,14 +39,46 @@ print(x)
 
 Now checkout with arrays of shape of (2, 3) - In below both the input arrays has shape of (2, 3)
 
-```python
-a = np.c_[np.array([[1,2,3], [11, 22, 33]]), np.array([[4,5,6], [44, 55, 66]])]
-print(a)
+I would explain this as follow. It concats your first array into the **last dimension (axis)** of your last array in the function.
 
-# [[ 1  2  3  4  5  6]
-#  [11 22 33 44 55 66]]
+For example:
 
-```
+    # both are 2 dimensional array
+    a = array([[1, 2, 3], [4, 5, 6]])
+    b = array([[7, 8, 9], [10, 11, 12]])
+
+Now, let's take a look at `np.c_(a, b)`:
+
+**First, let's look at the shape:**
+
+The shape of both a and b are `(2, 3)`. Concating a (2, 3) into the last axis of b (3), while keeping other axises unchanged (1) will become
+
+    (2, 3 + 3) = (2, 6)
+
+That's the new shape.
+
+**Now, let's look at the result:**
+
+In b, the 2 items in the last axis are:
+
+    1st: [7, 8, 9]
+    2nd: [10, 11, 12]
+
+Adding a to it means:
+
+    1st item: [1,2,3] + [7,8,9] = [1,2,3,7,8,9]
+    2nd item: [4,5,6] + [10,11,12] = [4,5,6,10,11,12]
+
+So, the result is
+
+    [
+      [1,2,3,7,8,9],
+      [4,5,6,10,11,12]
+    ]
+
+It's shape is (2, 6)
+
+````
 
 ---
 
@@ -56,7 +90,7 @@ print(a)
 y = np.array([1,2,3])
 print(y.ndim)
 # 1
-```
+````
 
 ---
 
