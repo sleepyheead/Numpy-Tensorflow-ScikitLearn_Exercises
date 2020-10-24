@@ -39,7 +39,7 @@ print(x)
 
 Now checkout with arrays of shape of (2, 3) - In below both the input arrays has shape of (2, 3)
 
-I would explain this as follow. It concats your first array into the **last dimension (axis)** of your last array in the function.
+#### We know the c\_ function concatenates your first array into the **last dimension (axis)** of your last array in the function.
 
 For example:
 
@@ -78,8 +78,6 @@ So, the result is
 
 It's shape is (2, 6)
 
-````
-
 ---
 
 ### Example-3
@@ -90,7 +88,7 @@ It's shape is (2, 6)
 y = np.array([1,2,3])
 print(y.ndim)
 # 1
-````
+```
 
 ---
 
