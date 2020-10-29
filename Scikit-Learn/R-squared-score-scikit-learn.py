@@ -66,6 +66,13 @@ We can try scaling our columns to have mean 0 and variance 1.
 We can do this using sklearn.preprocessing.StandardScaler. As a matter of fact, we should create a new estimator by concatenating a StandardScaler and the LinearRegression into a pipeline using sklearn.pipeline.Pipeline. Next you may want to try Ridge regression.
 
 
+Also remember that the syntax of the score function is as below
+
+(And this is a common bug - that you should double check is that you are passing in parameters correctly:)
+
+r2_score(y_true, y_pred) # Correct!
+r2_score(y_pred, y_true) # Incorrect!!!!
+
 
 
 '''
