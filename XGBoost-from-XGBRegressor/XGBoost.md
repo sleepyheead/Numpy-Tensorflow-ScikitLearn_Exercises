@@ -27,3 +27,5 @@ We can finally train our model similar to how we do so with Scikit Learn:
 ```
 model = xgb.train(param, D_train, steps)
 ```
+
+This algorithm goes by lots of different names such as gradient boosting, multiple additive regression trees, stochastic gradient boosting or gradient boosting machines.
