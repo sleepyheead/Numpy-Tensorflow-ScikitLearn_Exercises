@@ -14,6 +14,7 @@
 /Others_Code_gitignore
 /Others_Code_gitignore/*
 */Others_Code_gitignore/*
+**/Others_Code_gitignore/*
 
 # Ignoring specifically for Kaggle-Gravitational Waves Challenge (Large .npy files)
 
