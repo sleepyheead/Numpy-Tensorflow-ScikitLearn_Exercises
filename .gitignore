@@ -64,12 +64,6 @@ LARGE_Datasets
 **/*.txt
 /.txt
 
-*.png
-/*.png
-*/*.png
-**/*.png
-/.png
-
 
 *.csv
 /*.csv
